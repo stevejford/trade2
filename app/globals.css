@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    
+    /* Primary: #6161ff */
+    --primary: 240 100% 69%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Accent: #02c977 */
+    --accent: 153 98% 39%;
+    --accent-foreground: 0 0% 100%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 240 100% 69%;
+    --radius: 0.75rem;
+  }
+ 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    /* Primary: #6161ff */
+    --primary: 240 100% 69%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* Accent: #02c977 */
+    --accent: 153 98% 39%;
+    --accent-foreground: 0 0% 100%;
+    
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --muted: 240 5% 14.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 240 100% 69%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #6161ff 0%, rgba(97, 97, 255, 0.8) 100%);
+}
+
+.feature-icon {
+  color: #02c977;
+}
+
+/* Add consistent page padding */
+.page-container {
+  @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12 py-12 sm:py-16 lg:py-20;
+}
